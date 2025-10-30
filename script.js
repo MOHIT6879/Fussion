@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const menuItems = [
-    // === AUTHENTIC DESSERTS ===
+    
     { name: "Apricot Delight", price: 140, category: "desserts", img: "", desc: "A smooth, fruity delight made from apricots and cream." },
     { name: "Arabian Velvet Pudding", price: 130, category: "desserts", img: "", desc: "A luxurious pudding with silky texture." },
     { name: "Mango Delight", price: 140, category: "desserts", img: "", desc: "Fresh mango cream blend for tropical dessert lovers." },
@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     { name: "Classic TresLeches", price: 250, category: "desserts", img: "", desc: "Classic milk-soaked sponge dessert." },
     { name: "Rosemilk TresLeches", price: 270, category: "desserts", img: "", desc: "A floral twist to traditional Tres Leches." },
 
-    // === CHOCOLATE LOADED ===
+    
     { name: "Triple-Layer Fussion", price: 150, category: "chocolate", img: "", desc: "Three decadent layers of chocolate bliss." },
     { name: "Choco Biscoffe Bliss (CBB)", price: 190, category: "chocolate", img: "", desc: "Chocolate and Biscoff combo that melts in your mouth." },
     { name: "Chocolate Mousse Cake (Jar)", price: 260, category: "chocolate", img: "", desc: "Rich, creamy chocolate mousse in a jar." },
@@ -20,19 +20,19 @@ document.addEventListener("DOMContentLoaded", () => {
     { name: "Blueberry Delight", price: 210, category: "chocolate", img: "", desc: "A sweet fusion of chocolate and blueberry." },
     { name: "Death By Chocolate (DBC)", price: 200, category: "chocolate", img: "", desc: "The ultimate chocolate lover’s fantasy." },
 
-    // === CHEESE CAKES ===
+    
     { name: "Biscoff Cheese Cake", price: 270, category: "cheesecake", img: "", desc: "Creamy cheesecake topped with Biscoff crumbs." },
     { name: "Oreo Cheese Cake", price: 270, category: "cheesecake", img: "", desc: "Classic Oreo base with rich cheese layer." },
     { name: "Blueberry Cheese Cake", price: 270, category: "cheesecake", img: "", desc: "Tangy blueberry topping on a creamy base." },
 
-    // === ICE CREAMS ===
+    
     { name: "American Dry Fruit", price: "70 / 140", category: "icecream", img: "", desc: "Nutty, creamy and classic." },
     { name: "Fussion's Special", price: "70 / 140", category: "icecream", img: "", desc: "Signature in-house blend." },
     { name: "Chocolate", price: "60 / 120", category: "icecream", img: "", desc: "Smooth chocolate indulgence." },
     { name: "Vanilla", price: "60 / 120", category: "icecream", img: "", desc: "Classic vanilla richness." },
     { name: "Icecream Tali", price: 250, category: "icecream", img: "", desc: "A full plate of assorted ice creams!" },
 
-    // === MOCKTAILS ===
+    
     { name: "Ocean Blue Mojito", price: 120, category: "mocktail", img: "", desc: "Cool tropical blue mojito." },
     { name: "Bubblegum Mojito", price: 120, category: "mocktail", img: "", desc: "Sweet bubblegum flavored twist." },
     { name: "Black Current Mojito", price: 120, category: "mocktail", img: "", desc: "Rich blackcurrant freshness." },
@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
       menuContainer.appendChild(grid);
     }
 
-    // ✅ Force all menu cards visible (fix AOS hidden issue)
+    
     document.querySelectorAll('.bg-white').forEach(el => {
       el.style.display = 'block';
       el.style.opacity = '1';
@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
     return card;
   }
 
-  // MODAL FUNCTIONALITY
+  
   const modal = document.getElementById("itemModal");
   const closeModalBtn = document.getElementById("closeModal");
 
@@ -118,7 +118,7 @@ document.addEventListener("DOMContentLoaded", () => {
   closeModalBtn.addEventListener("click", () => modal.classList.add("hidden"));
   modal.addEventListener("click", (e) => { if (e.target === modal) modal.classList.add("hidden"); });
 
-  // FILTER BUTTONS
+  
   const buttons = document.querySelectorAll(".category-btn");
   buttons.forEach(btn => {
     btn.addEventListener("click", () => {
@@ -131,6 +131,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const allBtn = document.querySelector("[data-category='all']");
   if (allBtn) allBtn.classList.add("bg-pink-600", "text-white");
 
-  // ✅ Load all items immediately
+  
   renderMenu("all");
 });
