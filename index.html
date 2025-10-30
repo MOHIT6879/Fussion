@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fussion Menu</title>
+
+  <!-- TailwindCSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Lobster&display=swap" rel="stylesheet">
+
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-gradient-to-br from-pink-100 via-yellow-50 to-orange-100 font-[Poppins]">
+  <!-- HEADER -->
+  <header class="text-center py-8">
+    <img src="assets/logo.png" alt="Fussion Logo" class="mx-auto w-[8.5rem] rounded-full shadow-lg">
+    <h1 class="text-4xl md:text-5xl font-[Lobster] text-pink-700 mt-4">Fussion</h1>
+    <p class="text-gray-600 italic">Sweetness with a Twist!</p>
+  </header>
+
+  <!-- CATEGORY BUTTONS -->
+  <div class="flex flex-wrap justify-center gap-3 mb-6 px-4">
+    <button class="category-btn active" data-category="all">All</button>
+    <button class="category-btn" data-category="desserts">Authentic Desserts</button>
+    <button class="category-btn" data-category="chocolate">Chocolate Loaded</button>
+    <button class="category-btn" data-category="cheesecake">Cheese Cakes</button>
+    <button class="category-btn" data-category="icecream">Ice Creams</button>
+    <button class="category-btn" data-category="mocktail">Mocktails</button>
+  </div>
+
+  <!-- MENU ITEMS -->
+  <section id="menu" class="max-w-6xl mx-auto px-4 space-y-10 md:px-10 pb-10"></section>
+
+  <!-- FOOTER -->
+  <footer class="text-center py-6 text-sm text-gray-600">
+    © 2025 Fussion | Crafted with ❤️ by Mohit
+  </footer>
+
+  <!-- ITEM MODAL -->
+  <div id="itemModal" class="hidden fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50">
+    <div class="bg-white rounded-xl p-6 max-w-sm mx-4 shadow-xl relative">
+      <button id="closeModal" class="absolute top-2 right-3 text-gray-500 hover:text-gray-700 text-2xl">&times;</button>
+      <img id="modalImage" class="w-full h-48 object-cover rounded-lg mb-4" alt="">
+      <h2 id="modalTitle" class="text-2xl font-semibold text-pink-700"></h2>
+      <p id="modalPrice" class="text-gray-700 font-medium my-2"></p>
+      <p id="modalDescription" class="text-gray-600 text-sm"></p>
+    </div>
+  </div>
+
+  <!-- AOS Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true, duration: 800 });
+  </script>
+
+  <!-- Custom Script -->
+  <script src="script.js"></script>
+</body>
+</html>
